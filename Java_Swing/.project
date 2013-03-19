@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>opencsv-2.3</name>
+			<type>2</type>
+			<location>/Users/mothership/Downloads/opencsv-2.3</location>
+		</link>
+	</linkedResources>
 </projectDescription>

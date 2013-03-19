@@ -1,0 +1,6 @@
+E:\Csharp\csvReader\csvReader\bin\Debug\csvReader.exe.config
+E:\Csharp\csvReader\csvReader\bin\Debug\csvReader.exe
+E:\Csharp\csvReader\csvReader\bin\Debug\csvReader.pdb
+E:\Csharp\csvReader\csvReader\obj\Debug\csvReader.csprojResolveAssemblyReference.cache
+E:\Csharp\csvReader\csvReader\obj\Debug\csvReader.exe
+E:\Csharp\csvReader\csvReader\obj\Debug\csvReader.pdb

@@ -2,7 +2,9 @@
 <html>
     <head>
         <title>CSV Report</title>
-        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        <script src="jquerymin.js"></script>
+        <script src="jquerycsv.js"></script>
+        <!--<script src="calculate.js"></script>-->
     </head>
     <body>
         <h1>CSV Report</h1>
@@ -12,9 +14,40 @@
         <br>
         <button id='calculate'>Calculate</button>
         <p>Report</p>
-        <div id='report'>
+        <div id='report' style="width: 400px;">
             <!-- Report comes here -->
         </div>
+        <script>
+            $(document).ready(function(){
+               $('#calculate').click(function(){
+                $('#report').empty();
+                var data = $('#input').val();
+                    
+                  
+                 var totals={};
+                 $.each($.csv.toArrays(data), function(_, row) {
+                    
+                     var info = totals[row[0]];
+                              if (!info) {
+                                     info = {};
+                                     info.events = 0;
+                                     info.count = 0;
+                                     totals[row[0]] = info;
+                                    }
+
+                                info.events += row[1]++;
+                                info.count++;
+                               });
+                 $.each(totals,function(key,value){     
+                     $('#report').append('<div>' + key + ' has attended ' + value.events +"  "+'events with an average of'+"  "+(value.events/value.count) +'</div>');
+                 });
+                          
+               });
+            });
+        
+         
+        </script>
+        
     </body>
 
 </html>
